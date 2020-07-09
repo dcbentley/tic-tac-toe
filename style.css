@@ -1,0 +1,22 @@
+/* *, *:before, *:after{
+    box-sizing: border-box;
+} */
+
+body {
+    background-color: lightgrey;
+}
+
+.gameboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* fr = fractional units of the whole area*/
+    height: 70vmin; /* viewport unites = 70% of screen */
+    width: 70vmin;
+    margin: auto;
+}
+
+.box {
+    border: 1px solid;
+    margin-bottom: -1px;
+    margin-right: -1px;
+}
