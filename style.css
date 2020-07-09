@@ -4,15 +4,26 @@
 
 body {
     background-color: lightgrey;
+
+}
+
+h1 {
+    text-align: center;
 }
 
 .gameboard {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     /* fr = fractional units of the whole area*/
-    height: 70vmin; /* viewport unites = 70% of screen */
+    height: 70vmin;
+    /* viewport unites = 70% of screen */
     width: 70vmin;
     margin: auto;
+}
+
+.control-panel {
+    display: flex;
+    justify-content: center;
 }
 
 .box {
