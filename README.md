@@ -4,8 +4,6 @@
 
 - (MVP) Provide instructions
 
-- (MVP) As a player, I want to store the number of wins that I've had.
-
 - (MVP) As a player, provide UI feedback to know which box I selected
     - E.g.: show an X or and O
 
@@ -18,32 +16,24 @@
 
 - (MVP) Turn switching and status of who's turn it is
 
-- (MVP) CPU or Player opponent selection
+- (GOLD) CPU or Player opponent selection
 
-- (MVP - Secondary) As a player who requires accessibility features
+- (GOLD) As a player who requires accessibility features
     - E.g.: dark mode / light mode
     - E.g.: colorblind safe mode
     - E.g.: various language support
 
-- (GOLD) AI difficulty
+- (SILVER) AI difficulty
 
-- (GOLD) The ability to choose a larger game board and level of difficulty
-    - E.g.: Game board of 3x3, 9x9, ect. and then the number of symbols in a row to win/lose/tie
-
-- (GOLD) One of two player game (or more)
-
-- (GOLD) As a user I want a feature to choose something other than X and O
+- (SILVER) As a user I want a feature to choose something other than X and O
     - E.g.: Emojis, pictures of cats
 
-- (GOLD) Additional customizations
-    E.g.: Player avatar and custom name (gamerTag)
 
-
-- (SILVER) The ability to have each turn time.
+- (SILVER) The ability to have each turn timed.
     - Time limit to complete a move
     - Total game time
 
-- (SILVER) Game board theme: ability to have different colors and backgrounds for game board
+- (BRONZE) Game board theme: ability to have different colors and backgrounds for game board
 
 - (BRONZE) As a player, I would like to hear audible feedback for actions
 
