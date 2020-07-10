@@ -10,27 +10,17 @@ let gamePieceO = 'O';
 
 // Current players
 let currentPlayer = gamePieceX;
+let totalCount = 1;
 
-// Computer player
-let virtualPlayer00;
-let virtualPlayer01;
-
-// Current representation of the game board
-// let gameBoard= [
-    //                 [aa, bb, cc],
-    //                 [dd, ee, ff],
-    //                 [gg, hh, ii]
-    //                 ];
-    
-    function checkWinCondition () {
+function checkWinCondition () {
         // Check for win conditions function
     }
     
-    function checkTieCondition () {
+function checkTieCondition () {
         // Check for tieCondition
     }
     
-    function switchPlayers () {
+function switchPlayers () {
         // Switch or select different player 'x' vs 'o'
         // store user selections to variables
         // if player selects x assign other game piece to other player
@@ -41,49 +31,48 @@ let virtualPlayer01;
         // extra ternary operator
         // currentPlayer = currentPlayer === gamePieceX ? gamePieceO : gamePieceX;
     }
-    
-    
-    // Target boxes and add data-numbers
-    // let buttons = document.querySelectorAll('.js-button');
-    //     for (let i = 0; i < buttons.length; i++) {
-        //         buttons[i].setAttribute('data-number', i + 1);
-        //     }
-        
         
 // Click handler function for boxes
 function clickBoxHandler (e) {
         e.preventDefault();
-    // let increment = parseInt(e.target.dataset.increment);
-        console.log(e);
+        // console.log({e});
+        totalCount += 1;
+    if (e.target.innerText) {
+        console.log("There is text already there")
+    } else {
+        if (totalCount % 2) {
+                e.target.innerText = 'O';
+        document.querySelector('.current-player').innerText = 'Player One'; 
+        } else {
+            e.target.innerText = 'X';
+        document.querySelector('.current-player').innerText = 'Player Two';
+        }
+    }
+
 }
+
 // Click handler for Start and Reset button
 function clickStartResetHandler (e) {
-console.log({e})
+    console.log({e})
+    let clearAllTheThings = document.querySelectorAll('.box');
+    console.log({ clearAllTheThings });
+    clearAllTheThings.forEach((eachThing) => {
+        eachThing.innerText = ' ';
+    })
 }
-        
-function checkBoxNotOccupied () {
-    // Check if game space if NOT occupied 
-    // let isBoxOccupied = document.querySelectorAll
-}
+
         
 function startOrRestartGame () {
-    // Way to start or restart game
-    // Target boxes when clicked
+    // Way to start or restart game and target boxes when clicked
     let playerBoxes = document.querySelectorAll('.box');
         playerBoxes.forEach((box) => {
         box.addEventListener('click', clickBoxHandler)
         });
-        if (currentPlayer === gamePieceX) {
-            // document.querySelectorAll(e.srcElement)
-            // document.querySelectorAll(e.target.dataset);
-        }
 
-    let startORReset = document.querySelectorAll('.control-panel');
+    let startORReset = document.querySelectorAll('.start-reset');
         startORReset.forEach((GoReset) => {
             GoReset.addEventListener('click', clickStartResetHandler)
-            // ADD FUNCTIONALITY
-            // clear all spaces on the board
-            let playerBoxes = ' ';
+            
         });
 
 }
@@ -95,13 +84,4 @@ function turnSequence () {
     switchPlayers();
 }
 
-function writeMessage () {
-    // update the game board message with game status
-}
-
-// check to see if switch player is working
-// console.log((currentPlayer));
-
 startOrRestartGame();
-
-console.log()
